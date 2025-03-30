@@ -1,7 +1,7 @@
 '''
 Author       : Lihao leolihao@arizona.edu
 Date         : 2025-03-22 13:17:16
-FilePath     : /EasyCalib-server/tools/clean_cache.py
+FilePath     : /EasyCalib/tools/clean_cache.py
 Description  : 
 Copyright (c) 2025 by Lihao (leolihao@arizona.edu), All Rights Reserved.
 '''
@@ -17,8 +17,6 @@ CLEAN_CONFIG = {
     "purge_dirs": [
         '**/__pycache__',
         '.pytest_cache',
-        'build',
-        'dist',
         '.eggs',
     ],
     
@@ -36,7 +34,14 @@ CLEAN_CONFIG = {
     
     # Deep cleaning extensions
     "deep_clean_additions": {
-        'dirs': ['**/.ipynb_checkpoints'],
+        'dirs': ['**/.ipynb_checkpoints',
+                 'dist',
+                 'build',
+                 'logs',
+                 'profile',
+                 'cache',
+                 'temp',
+                 ],
         'files': ['**/*.log',
                   './data/postgres/*',
                   './data/redis/*']
