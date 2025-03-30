@@ -1,7 +1,7 @@
 '''
 Author       : Lihao leolihao@arizona.edu
 Date         : 2024-10-27 14:50:35
-FilePath     : /EasyCalib-server/tools/dump_structure.py
+FilePath     : /EasyCalib/tools/dump_structure.py
 Description  : 
 Copyright (c) 2024 by Lihao (leolihao@arizona.edu), All Rights Reserved.
 '''
@@ -65,7 +65,7 @@ if __name__ == "__main__":
                         help="The maximum depth of the directory tree to display")
 
     # use argparse to specify the directory in the project to dump
-    parser.add_argument("--dir", type=str, default=".",
+    parser.add_argument("--dir", type=str, default="",
                         help="The directory in the project to dump")
     args = parser.parse_args()
 
